@@ -43,8 +43,8 @@ deploy:
           ssh-add ~/.ssh/ ssh-praktikan93
           echo "Cek folder project";
           [ ! -d "${HOME}/senpro/498733/modul02/senpro-github-action/" ] && 
-	    {
-	      echo "Repository belum di-clone. Cloning...";
+          {
+              echo "Repository belum di-clone. Cloning...";
               mkdir -p ~/senpro/498733/modul02;
               cd ~/senpro/498733/modul02;
               git clone https://github.com/tsabitahinayah/senpro-github-action.git;
@@ -53,7 +53,7 @@ deploy:
               npm install;
               npm run build;
             } || 
-	    {
+            {
               echo "Repository sudah ada. Building...";
               cd ~/senpro/498733/modul02/senpro-github-action;
               git restore .;
